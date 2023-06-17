@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Movie App</title>
+    <!-- Google Font -->
+    <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap"
+            rel="stylesheet"
+    />
+    <!-- Stylesheet -->
+    <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+<div class="container">
+        <h1>Movie Search App</h1>
+    <h6 class="developer">Developed by <a href="https://github.com/yassine-hamadou">Yassine</a></h6>
+
+    <form class="search-container" onsubmit="return false">
+
+        <h3> </h3>
+        <label for="movie-name"></label>
+        <input
+            id="movie-name"
+            placeholder="Enter movie name here..."
+            required
+            type="search"
+        />
+        <button id="search-btn" type="submit"><span id="spin">Search</span></button>
+    </form>
+    <div id="result"></div>
+    <h5 class="credit">Powered by <a href="https://www.omdbapi.com">OMDB</a></h5>
+</div>
+
+<script src="apiKey.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
