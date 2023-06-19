@@ -35,7 +35,7 @@ const getMovie = async () => {
                     <div>
                         <h2>${data.Title}</h2>
                         <div class="rating">
-                            <img src="star-icon.svg" alt="Movie Rating">
+                            <img src="assets/images/rating.svg" alt="Movie Rating">
                             <h4>${data.imdbRating}</h4>
                         </div>
                         <div class="details">
@@ -48,13 +48,21 @@ const getMovie = async () => {
                         </div>
                     </div>
                 </div>
+<!--                detail button--> 
                 <h3>Plot:</h3>
                 <p>${data.Plot}</p>
                 <h3>Cast:</h3>
-                <p>${data.Actors}</p> 
+                <p>${data.Actors}</p>  
+                <button id="details-button" onclick="window.open('https://www.imdb.com/title/${data.imdbID}/')">View Details</button>
+                
             `;
             } else {
-                result.innerHTML = `<h3 class="msg">Movie Not Found</h3>`;
+                result.innerHTML = `
+                    <div class="result-image"> 
+                        <img src="assets/images/404-error_d.png" alt="Movie Poster" width="250" >
+                        <h2>${data.Error}</h2>
+                    </div> 
+                `;
             }
         } catch (Error) {
             console.log("error", Error);
